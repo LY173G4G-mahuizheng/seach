@@ -30,7 +30,6 @@ public class wanfangParaset {
             List<JSONObject> wanfang = getWanfang(parse);
                 list.addAll(wanfang);
         }
-            list.forEach(l -> System.out.println(l));
             return list;
         } catch (IOException e) {
             e.printStackTrace();

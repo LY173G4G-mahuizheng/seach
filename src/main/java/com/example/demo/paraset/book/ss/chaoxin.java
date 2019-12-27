@@ -27,7 +27,6 @@ public class chaoxin {
             Map<String, String> cookies = execute.cookies();
             Jsoup.parse(execute.body());
             Document document = getDocument(name, cookies);
-            System.out.println(document);
             List<JSONObject> can = getCan(document);
             return can;
         } catch (IOException e) {

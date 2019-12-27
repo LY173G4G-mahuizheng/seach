@@ -19,7 +19,7 @@ public class xzParaset {
         String url = "http://172.16.104.43/web/PageList.aspx?strwhere=" +name;
         Connection con = Jsoup.connect(url);
         try {
-            Connection.Response execute = con.method(Connection.Method.GET).timeout(5000).execute();
+            Connection.Response execute = con.method(Connection.Method.GET).timeout(3000).execute();
             Document parse = Jsoup.parse(execute.body());
             System.out.println(parse);
             List<JSONObject> bjadks = getBjadks(parse);

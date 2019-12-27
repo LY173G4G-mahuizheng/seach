@@ -49,7 +49,7 @@ public class gbpParaset {
         Connection con = Jsoup.connect(url);
         Connection headers = con.headers(map);
         try {
-            Connection.Response execute = headers.data(FormData.query_string(name)).timeout(5000)
+            Connection.Response execute = headers.data(FormData.query_string(name)).timeout(3000)
                     .cookies(cookies).method(Connection.Method.POST).execute();
             Document parse = Jsoup.parse(execute.body());
             return parse;

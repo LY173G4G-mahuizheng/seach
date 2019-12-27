@@ -24,9 +24,8 @@ public class ctoParaset {
         String url = "http://e-learning.51cto.com/search?keyword=" +name;
         Connection con = Jsoup.connect(url);
         try {
-            Connection.Response execute = con.method(Connection.Method.GET).timeout(5000).execute();
+            Connection.Response execute = con.method(Connection.Method.GET).timeout(3000).execute();
             Document parse = Jsoup.parse(execute.body());
-            System.out.println(parse);
             List<JSONObject> bjadks = getBjadks(parse);
             return bjadks;
         } catch (IOException e) {
@@ -79,7 +78,6 @@ public class ctoParaset {
             object.put("about", "cto");
             list.add(object);
         }
-        list.forEach(l -> l.forEach((k,v) -> System.out.println(k + "----------------->" + v)));
         return list;
     }
 

@@ -24,7 +24,7 @@ public class lyParaset {
         String url = "http://lzmvc.vip.qikan.com/SearchByName.aspx?t=4&o=1&k=" + common.getgb2312( name);
         Connection con = Jsoup.connect(url);
 
-            Connection.Response execute = con.method(Connection.Method.GET).timeout(5000).execute();
+            Connection.Response execute = con.method(Connection.Method.GET).timeout(3000).execute();
             Document parse = Jsoup.parse(execute.body());
             List<JSONObject> lzmvc = getLzmvc(parse);
             return lzmvc;
@@ -41,7 +41,7 @@ public class lyParaset {
 
     public static List<JSONObject> getLzmvc(Document doucuDocument){
 
-        //            System.out.println(doucuDocument);
+
 
         ArrayList<JSONObject> list = new ArrayList<>();
         String css = "div#result";
@@ -73,10 +73,6 @@ public class lyParaset {
            }
         }
         return list;
-    }
-
-    public static void main(String[] args) {
-        reconnection("职业");
     }
 
 }

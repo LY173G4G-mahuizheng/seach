@@ -69,7 +69,6 @@ public class wxxzxParaset {
             object.put("about", "jbadks");
             list.add(object);
         }
-        list.forEach(l -> l.forEach((k,v) -> System.out.println(k + "----------------->" + v)));
         return list;
     }
 
