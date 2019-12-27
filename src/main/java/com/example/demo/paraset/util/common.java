@@ -1,4 +1,4 @@
-package com.example.demo.util;
+package com.example.demo.paraset.util;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -22,6 +22,14 @@ public class common {
     public static String getgb2312(String str)  {
         try {
             return URLEncoder.encode(str,"gb2312");
+        } catch (UnsupportedEncodingException e) {
+            return "字符串异常";
+        }
+    }
+
+    public static String get8859_1(String str)  {
+        try {
+            return new String(str.getBytes("GB2312"),"8859_1");
         } catch (UnsupportedEncodingException e) {
             return "字符串异常";
         }

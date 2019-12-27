@@ -1,6 +1,6 @@
-package com.example.demo.ElectronicJournal.cnki;
+package com.example.demo.paraset.ElectronicJournal.cnki;
 
-import com.example.demo.util.common;
+import com.example.demo.paraset.util.common;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,9 +30,9 @@ public class paraset {
         parameter.put("txt_1_value1",search);
         return parameter;
     }
-    public static Map<String,String> query_string(){
+    public static Map<String,String> query_string(String page){
         HashMap<String, String> query = new HashMap<>();
-        query.put("curpage","1");
+        query.put("curpage",page);
         query.put("RecordsPerPage","50");
         query.put("QueryID","16");
         query.put("ID","");

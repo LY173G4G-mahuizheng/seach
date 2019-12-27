@@ -1,4 +1,4 @@
-package com.example.demo.ElectronicJournal.cnki;
+package com.example.demo.paraset.ElectronicJournal.cnki;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
